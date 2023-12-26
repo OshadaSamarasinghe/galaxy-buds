@@ -290,19 +290,64 @@ button {
   padding: 2rem 1.5rem;
   border-radius: 0.75rem;
 }
-
 .buy__title {
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-0-75);
 }
-
 .buy__description {
   margin-bottom: var(--mb-1);
 }
-
 .buy__img {
   width: 300px;
   position: absolute;
   top: 4rem;
   right: -11rem;
+}
+.colors__line {
+  line-height: 4rem;
+}
+
+.colors__container {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem 1.5rem;
+  padding-top: 3rem;
+}
+
+.colors__card {
+  position: relative;
+  height: 132px;
+  background-color: var(--container-color);
+  padding: 0.75rem;
+  border-radius: 1rem;
+  display: grid;
+}
+
+.colors__img {
+  width: 100px;
+  position: absolute;
+  inset: 0;
+  margin-right: auto;
+  margin-left: auto;
+  top: -3rem;
+}
+
+.colors__content {
+  align-self: flex-end;
+}
+
+.colors__title,
+.colors__price {
+  font-size: var(--small-font-size);
+}
+
+.colors__price {
+  font-weight: var(--font-semi-bold);
+}
+
+.colors__button {
+  position: absolute;
+  right: 0.2rem;
+  bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
 }
