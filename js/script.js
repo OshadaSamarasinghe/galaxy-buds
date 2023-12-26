@@ -56,3 +56,26 @@ function scrollActive() {
   });
 }
 window.addEventListener("scroll", scrollActive);
+
+const sr = ScrollReveal({
+  distance: "60px",
+  duration: 2500,
+  delay: 400,
+  // reset: true
+});
+
+sr.reveal(`.home__header, .section__title`, { delay: 600 });
+sr.reveal(`.home__footer`, { delay: 700 });
+sr.reveal(`.home__img`, { delay: 900, origin: "top" });
+
+sr.reveal(`.colors__card, .footer__logo, .footer__content,`, {
+  origin: "top",
+  interval: 100,
+});
+sr.reveal(`.specs__data, .buy__animate`, {
+  origin: "left",
+  interval: 100,
+});
+sr.reveal(`.specs__img, .buy__img`, { origin: "right" });
+sr.reveal(`.battery__img`, { origin: "top" });
+sr.reveal(`.battery__data`);

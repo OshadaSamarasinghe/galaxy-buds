@@ -12,8 +12,8 @@
   --body-color: hsl(var(--hue-color), 4%, 6%);
   --container-color: hsl(var(--hue-color), 4%, 10%);
   --text-gradient: linear-gradient(
-    hsl(var(--hue-color), 4%, 24%),
-    hsl(var(--hue-color), 4%, 8%)
+    hsl(46, 100%, 29%),
+    hsl(var(--hue-color), 4%, 20%)
   );
   --scroll-thumb-color: hsl(var(--hue-color), 4%, 16%);
   --scroll-thumb-color-alt: hsl(var(--hue-color), 4%, 20%);
@@ -400,14 +400,6 @@ button {
 .footer__social-link:hover {
   background-color: var(--black-color);
 }
-.footer__copy {
-  margin-top: 5rem;
-  text-align: center;
-}
-.footer__copy-link {
-  font-size: var(--smaller-font-size);
-  color: var(--text-color-light);
-}
 .scrollup {
   position: fixed;
   right: 1rem;
@@ -447,4 +439,190 @@ button {
 }
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--scroll-thumb-color-alt);
+}
+
+@media screen and (max-width: 340px) {
+  .container {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+  .section__title {
+    font-size: var(--big-font-size);
+  }
+  .home__img {
+    width: 160px;
+    top: 2rem;
+  }
+  .home__title {
+    top: -4rem;
+    font-size: var(--bigger-font-size);
+  }
+  .home__data {
+    padding-top: 1rem;
+  }
+  .home__description {
+    font-size: var(--small-font-size);
+  }
+  .specs__img {
+    width: 200px;
+  }
+  .battery__container {
+    grid-template-columns: 0.6fr 1fr;
+  }
+  .battery__img {
+    width: 200px;
+    top: -1rem;
+    left: -5rem;
+  }
+  .battery__data {
+    padding: 0;
+  }
+  .products__container {
+    grid-template-columns: 142px;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 576px) {
+  .home__container {
+    grid-template-columns: 0.8fr 1fr;
+  }
+  .home__data {
+    padding-top: 2rem;
+  }
+  .home__img {
+    top: 11rem;
+    left: 2rem;
+  }
+  .specs__img {
+    position: initial;
+  }
+  .specs__container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+  .battery__img {
+    position: initial;
+  }
+  .battery__data {
+    padding: 0;
+  }
+  .battery__container {
+    grid-template-columns: max-content 250px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2rem;
+  }
+  .buy__img {
+    position: initial;
+  }
+  .buy__container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+  .colors__container {
+    grid-template-columns: repeat(3, 142px);
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 767px) {
+  body {
+    margin: 0;
+  }
+  .section {
+    padding: 6rem 0 2rem;
+  }
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
+  }
+  .nav__logo {
+    width: 2rem;
+  }
+  .nav__list {
+    flex-direction: row;
+    column-gap: 3.5rem;
+  }
+  .nav__link {
+    font-size: var(--normal-font-size);
+    text-transform: initial;
+  }
+  .nav__toggle,
+  .nav__close {
+    display: none;
+  }
+  .home__container {
+    position: relative;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .home__img {
+    top: 9rem;
+    left: 4rem;
+  }
+  .home__data {
+    padding-top: 8rem;
+  }
+  .specs__img {
+    width: 300px;
+  }
+  .battery__container {
+    column-gap: 5rem;
+  }
+  .battery__img {
+    width: 300px;
+  }
+  .battery__description {
+    margin-bottom: var(--mb-2);
+  }
+  .buy__container {
+    grid-template-columns: 250px max-content;
+    justify-content: center;
+    column-gap: 5rem;
+    padding: 3rem 0;
+  }
+  .buy__title {
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-1);
+  }
+  .buy__description {
+    margin-bottom: var(--mb-2);
+  }
+  .colors__container {
+    grid-template-columns: repeat(3, 162px);
+    gap: 6rem 3rem;
+    padding-top: 5rem;
+  }
+  .colors__card {
+    height: 152px;
+    padding: 0.85rem;
+  }
+  .colors__img {
+    width: 100px;
+  }
+  .footer__container {
+    grid-template-columns: 0.4fr 0.7fr 0.7fr 1fr;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .home__img {
+    width: 300px;
+    top: 5rem;
+  }
+  .home__title {
+    top: -5rem;
+    left: 3.5rem;
+  }
+  .home__description {
+    padding-right: 5rem;
+  }
+  .buy__img {
+    width: 350px;
+  }
+  .footer__container {
+    padding-top: 3rem;
+  }
 }
